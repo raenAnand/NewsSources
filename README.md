@@ -1,4 +1,4 @@
-# newssources
+# NewsSources
 
 A news Application
 
@@ -8,7 +8,7 @@ This project is a starting point for a Flutter application.
 
 This app uses newsApi.org apis to fetch news
 
-//TODO:
-## option to choose country coming soon
-## save current tab
+## //TODO:
+### option to choose country coming soon
+### save current tab
 
