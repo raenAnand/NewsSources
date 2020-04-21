@@ -3,6 +3,8 @@ import 'package:newssources/helper/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
+//webview to display a singleton news
+
 class ArticleView extends StatefulWidget {
 
   final String postUrl;

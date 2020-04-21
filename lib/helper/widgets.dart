@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:newssources/views/article_view.dart';
 
+
+// customised widgets for each screen
+//made to be used multiple times
+
+
 Widget MyAppBar(){
   return AppBar(
     title: Row(
@@ -22,6 +27,7 @@ Widget MyAppBar(){
   );
 }
 
+//for a single news lists element
 
 class NewsTile extends StatelessWidget {
   final String imgUrl, title, desc, content, posturl;
@@ -85,6 +91,7 @@ class NewsTile extends StatelessWidget {
   }
 }
 
+// widget for tabs for news sources
 
 class CustomTabView extends StatefulWidget {
   final int itemCount;

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:newssources/helper/news.dart';
 import 'package:newssources/helper/widgets.dart';
 
+//class designed to fetch news from particular source
+
 class SourcesNews extends StatefulWidget {
 
   final String newsCategory;
@@ -24,14 +26,14 @@ class _SourcesNewsState extends State<SourcesNews> {
   }
 
   void getNews() async {
-    NewsForCategorie news = NewsForCategorie();
+    NewsForSource news = NewsForSource();//function defined in news.dart to fetch news for each sources.
     await news.getNewsForCategory(widget.newsCategory);
     newslist = news.news;
     setState(() {
       _loading = false;
     });
   }
-
+  //building news for the a particular Source.
   @override
   Widget build(BuildContext context) {
     return Scaffold(

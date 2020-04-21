@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:newssources/models/sources_model.dart';
 import 'package:http/http.dart' as http;
-import 'package:newssources/models/article.dart';
 import 'dart:convert';
 
-class sources{
+// class to fetch all the news sources
+
+class Sources{
   Future<List<SourcesModel>> getCatagories() async{
 
     List<SourcesModel> myCategories = List<SourcesModel>();
@@ -22,6 +22,5 @@ class sources{
       });
     }
     return myCategories;
-
   }
 }

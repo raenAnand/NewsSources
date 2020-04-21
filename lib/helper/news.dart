@@ -4,6 +4,8 @@ import 'dart:convert';
 
 import 'package:newssources/secret.dart';
 
+// class destined for news collection from the api
+
 class News {
 
   List<Article> news  = [];
@@ -38,7 +40,7 @@ class News {
 }
 
 
-class NewsForCategorie {
+class NewsForSource {
 
   List<Article> news  = [];
 

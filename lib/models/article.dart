@@ -1,3 +1,5 @@
+//a model to store data of a single article
+//used to generate a list
 class Article{
 
   String title;

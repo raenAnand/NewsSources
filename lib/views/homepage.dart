@@ -1,10 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:newssources/helper/data.dart';
+import 'package:newssources/helper/fetchSources.dart';
 import 'package:newssources/helper/widgets.dart';
 import 'package:newssources/models/sources_model.dart';
 import 'package:newssources/views/sources_news.dart';
 import '../helper/news.dart';
+
+//this page makes the home page of this application
 
 class HomePage extends StatefulWidget {
   @override
@@ -17,11 +19,11 @@ class _HomePageState extends State<HomePage> {
   List<String> data = ['Headlines'];
   List<String> id = ['none'];
   List<SourcesModel> categories = List<SourcesModel>();
-
+  //Method to get news
   void getNews() async {
     News news = News();
     super.initState();
-    sources s = sources();
+    Sources s = Sources();
     categories = await s.getCatagories();
     for(var i=0;i<categories.length;i++){
       data.add(categories[i].sourceName);
@@ -39,7 +41,7 @@ class _HomePageState extends State<HomePage> {
     _loading = true;
     getNews();
   }
-
+  //this method designs home page
   @override
   Widget build(BuildContext context) {
     int initPosition = 0;
